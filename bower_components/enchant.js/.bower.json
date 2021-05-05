@@ -1,0 +1,20 @@
+{
+  "name": "enchant.js",
+  "version": "0.8.3",
+  "main": "enchant.js",
+  "ignore": [
+    "node_modules",
+    "components"
+  ],
+  "homepage": "https://github.com/wise9/enchant.js",
+  "_release": "0.8.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.8.3",
+    "commit": "2f27e71dab48b927a89443106718b6bebbb37de0"
+  },
+  "_source": "https://github.com/wise9/enchant.js.git",
+  "_target": "^0.8.3",
+  "_originalSource": "enchant.js",
+  "_direct": true
+}
