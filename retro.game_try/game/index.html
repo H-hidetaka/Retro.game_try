@@ -37,7 +37,7 @@
           text-shadow: 2px 2px 0 #000;
           line-height: 32px;
         }
-	
+
 	/* モーダル */
         .modal {
           z-index: 1;
@@ -72,14 +72,266 @@
 		height: 32px;
 		margin: 0 5px;
 		background-size: 32px 32px;
-		background-image: url('./bomb2.png);
+		background-image: url('.VueBERMAN/bomb2.png');
 	}
 	.modal＿inner {
 		position: absolute;
 		top: 50%;
-		left
+		left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+  }
+  .modal__heading {
+    dsiplay: block;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+  }
+  .modal__heading > span {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    background-size: 32px 32px;
+    background-image: url('.VueBEARMAN/bomb2.png');
+  }
+  .modal__link {
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 30px;
+    padding: 0 15px;
+    border: solid 2px #fff;
+    font-size: 30px;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+  }
+  .modal__link:hover {
+    color: #fff;
+    background-color: #000;
+  }
+  .modal__block {
+    margin-top: 40px;
+    padding: 0 32px;
+    text-align: left;
+  }
+  .modal__list {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 18px;
+  }
+  .modal__list > dt {
+    display: inline-block;
+  }
+  .modal__list > dd {
+    display: inline-block;
+  }
+  .modal__image {
+    margin: 20px auto 0 auto;
+    display: block;
+  }
 
-
-          </style>
+  /* ゲームパーツ */
+  .time-count {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    font-size: 25px;
+    text-shadow: 2px 2px 0 #000;
+  }
+  .time-count > dt {
+    display: inline-block;
+    width: 2em;
+  }
+  .time-count > dd {
+    display: inline-block;
+    width: 2em;
+    text-align: right;
+  }
+  .left-count {
+    position: absolute;
+    top: 0px;
+    right: 32px;
+    font-size: 25px;
+    text-shadow: 2px 2px 0 #000;
+  }
+  .left-count > dt {
+    display: inline-block;
+    width: 2em;
+  }
+  .left-count > dd {
+    display: inline-block;
+    width: 2em;
+  }
+  .player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    background-size: 544px 32px;
+    background-image: url('.VueBERMAN/player.png');
+  }
+  .enemy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    background-size: 96px 32px;
+    background-image: url('.VueBERMAN/enemy.png');
+    transition-delay: 0ms;
+    transition-duration: 450ms;
+    transition-property: transform;
+    transition-timing-function: linear;
+  }
+  .field {
+    position: relative;
+  }
+  .cell {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #62972c;
+    background-size: 32px 32px;
+  }
+  .cell.fixed {
+    background-image: url('.VueBERMAN/fixed.png');
+  }
+  .cell.free {
+  }
+  .cell.block {
+    background-image: url('.VueBERMAN/block.png');
+  }
+  .cell.block-broken {
+    background-imgae: url('.VueBERMAN/block-bloken.png');
+  }
+  .cell.bomb {
+    background-position: 0 0;
+    background-size: 128px 32px;
+    background-image: url('.VueBERMAN/bomb.png');
+  }
+  .cell.explosion {
+    background-position: 0 0;
+    background-size: 480px 32px;
+    background-image: url('.VueBERMAN/explosion.png');
+  }
+  .cell.item-fire-power {
+    background-iamge: url('.VueBERMAN/item-fire-power.png');
+  }
+  .cell.item-move-speed {
+    background-image: url('.VueBERMAN/item-move-speed.png');
+  }
+  .cell.item-bomb-possesions {
+    background-image: url('.VueBERMAN/item-move-speed.png');
+  }
+  .exit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-image: url('.VueBERMAN/exit.png');
+  }
+  /*.cell.current {*/
+      /*background: none;*/
+      /*background-color: #98e23e;*/
+  /*}*/
+    </style>
   </head>
+  <body>
+    <div id="app" class="container">
+      <di class="time-count">
+        <dt>Time</dt>
+        <dd>{{ time }}</dd>
+      </di>
+      <dl class="left-count">
+        <dt>LEFT</dt>
+        <dd>{{ left }}</dd>
+      </dl>
+      <div class="field" v-bind:style="{ width: gameMap[0].length * config.CELL_SIZE, height: ganeMap.length * config.CELL_SIZE }">
+
+        <!-- GAME OPENING-->
+        <template v-if="scene === config.SCENE_GAME_OPENING">
+          <div class="modal">
+            <div class="modal__inner">
+              <h1 class="modal__inner">Vue<span></span>BERMAN</h1>
+              <a class="modal__link" href="#" v-on:click.prevent="scene = config.SCENE_GAME_PLAY">GAME START</a>
+              <div class="modal__block">
+                <dl class="modal__list">
+                  <dt>MOVE UP : </dt>
+                  <dd>ArrowUP or W</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>Move DOWN : </dt>
+                  <dd>ArrowDown or S</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>Move LEFT : </dt>
+                  <dd>ArrowLeft or A</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>Move RIGHT : </dt>
+                  <dd>ArrowRight or D</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>Move LEFT : </dt>
+                  <dd>ArrowLeft or A</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>MOVE RIGHT : </dt>
+                  <dd>ArrowRight or D</dd>
+                </dl>
+                <dl class="modal__list">
+                  <dt>SET BOMB : </dt>
+                  <dd>Shift or Enter</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!-- /GAME OPENING -->
+
+        <template v-for="(row, i) in gameMap">
+          <template v-for="(col, j) in row">
+            <template v-if="col == config.CELL_TYPE_FIXED">
+              <div class="cell fixed" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE}"></div>
+            </template>
+            <template v-if="col == config.CELL_TYPE_FREE">
+              <div class="cell free" v-bind:class="player.currentPositionX === j && player.currentPositionY === i ? 'current' : ''" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col == config.CELL_TYPE_BLOCK">
+              <div class="cell block" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col == config.CELL_TYPE_BLOCK_BROKEN">
+              <div class="cell block-broken" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col == config.CELL_TYPE_BOMB">
+              <div class="cell bomb" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE , backgroundPosition: bombBackgroundPosition }"></div>
+            </template>
+            <template v-else-if="col == config.CELL_TYPE_EXPLOSION">
+              <div class="cell explosion" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE, top: i * config.CELL_SIZE , backgroundPosition: getExplosionBackgroundPosition(i, j)}"></div>
+            </template>
+            <template v-else-if="col === config.CELL_TYPE_ITEM_EXPLOSION_POWER">
+              <div class="cell item-fire-power" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col === config.CELL_TYPE_ITEM_MOVE_SPEED">
+              <div class="cell item-move-spped" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col === config.CELL_TYPE_ITEM_BOMB_POSSESSIONS">
+              <div class="cell item-bomb-possesions" v-bind:style="{ left: j * config.CELL_SIZE, top: i * config.CELL_SIZE }"></div>
+            </template>
+            <template v-else-if="col == config.CELL_TYPE_"
+            </template>
+          </template>
+        </template>
+      </div>
+    </div>
+  </body>
+
 </html>
