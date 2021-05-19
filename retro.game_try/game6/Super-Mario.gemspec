@@ -13,5 +13,5 @@ Gem::Specification.new do |game|
   game.require_paths = ['lib']
   game.license = 'GPLv3'
   game.add_runtime_dependency 'gosu', '~>0.8'
-  game.add_developm
+  game.add_development_dependency 'rspec', '~>3.1'
 end
