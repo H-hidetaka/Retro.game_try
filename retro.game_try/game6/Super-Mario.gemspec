@@ -1,6 +1,6 @@
 Gem::Specification.new do |game|
   game.name     = 'Super-Mario'
-  game.version  = '0.2'
+  game.version  = '0.2.1'
   game.authors  = ['Aizawa Hidetaka']
   game.email    = ['sansanhidetaka@gmail.com']
   game.homepage = 'https://github.com/H-hidetaka/Retro.game_try/tree/master/retro.game_try/game6'
