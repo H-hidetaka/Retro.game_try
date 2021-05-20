@@ -1,0 +1,1232 @@
+current directory: /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/ext/gosu
+/Users/hidetaka/.rbenv/versions/2.6.4/bin/ruby -I /Users/hidetaka/.rbenv/versions/2.6.4/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210511-50116-1007i0a.rb extconf.rb
+The Gosu gem requires some libraries to be installed system-wide.
+See the following site for a list:
+https://github.com/gosu/gosu/wiki/Getting-Started-on-OS-X
+creating Makefile
+
+current directory: /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/ext/gosu
+make "DESTDIR=" clean
+
+current directory: /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/ext/gosu
+make "DESTDIR="
+compiling ../../src/Audio.cpp
+compiling ../../src/AudioFileAudioToolbox.cpp
+compiling ../../src/AudioFileSDLSound.cpp
+compiling ../../src/AudioImpl.cpp
+../../src/AudioImpl.cpp:55:23: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+    for (int i = 1; i < CHANNELS; ++i) {
+                    ~ ^ ~~~~~~~~
+../../src/AudioImpl.cpp:71:35: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+    return channel < 0 || channel >= CHANNELS || _tokens[channel] != token;
+                          ~~~~~~~ ^  ~~~~~~~~
+../../src/AudioImpl.cpp:76:32: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+    if (channel < 0 || channel >= CHANNELS) {
+                       ~~~~~~~ ^  ~~~~~~~~
+3 warnings generated.
+compiling ../../src/Bitmap.cpp
+compiling ../../src/BitmapIO.cpp
+In file included from ../../src/BitmapIO.cpp:16:
+../../dependencies/stb/stb_image.h:4123:10: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+   if (b >= sizeof (z->size)) return -1; // some data was corrupt somewhere!
+       ~ ^  ~~~~~~~~~~~~~~~~
+../../src/BitmapIO.cpp:26:39: warning: comparison of integers of different signs: 'int' and 'std::size_t' (aka 'unsigned long') [-Wsign-compare]
+    std::size_t adjusted_size = (size < remaining ? size : remaining);
+                                 ~~~~ ^ ~~~~~~~~~
+In file included from ../../src/BitmapIO.cpp:92:
+../../dependencies/stb/stb_image_write.h:400:24: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+   if (s->buf_used + 1 > sizeof(s->buffer))
+       ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~
+../../dependencies/stb/stb_image_write.h:408:24: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+   if (s->buf_used + 3 > sizeof(s->buffer))
+       ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~
+4 warnings generated.
+compiling ../../src/BlockAllocator.cpp
+compiling ../../src/Channel.cpp
+compiling ../../src/Color.cpp
+compiling ../../src/DirectoriesApple.cpp
+compiling ../../src/DirectoriesUnix.cpp
+compiling ../../src/DirectoriesWin.cpp
+compiling ../../src/FileUnix.cpp
+compiling ../../src/FileWin.cpp
+compiling ../../src/Font.cpp
+compiling ../../src/GosuGLView.cpp
+compiling ../../src/GosuViewController.cpp
+compiling ../../src/Graphics.cpp
+In file included from ../../src/Graphics.cpp:2:
+../../src/DrawOp.hpp:108:36: warning: comparison of integers of different signs: 'unsigned int' and 'const int' [-Wsign-compare]
+            for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                 ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+../../src/Graphics.cpp:436:80: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        if (src_x == 0 && src_width == src.width() && src_y == 0 && src_height == src.height()) {
+                                                                    ~~~~~~~~~~ ^  ~~~~~~~~~~~~
+../../src/Graphics.cpp:436:37: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+        if (src_x == 0 && src_width == src.width() && src_y == 0 && src_height == src.height()) {
+                          ~~~~~~~~~ ^  ~~~~~~~~~~~
+3 warnings generated.
+compiling ../../src/IO.cpp
+compiling ../../src/Image.cpp
+compiling ../../src/Input.cpp
+../../src/Input.cpp:198:27: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < gamepad_slots.size(); i++) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:210:27: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < gamepad_slots.size(); i++) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:222:27: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int j = 0; j < gamepad_slots.size(); j++) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:237:27: warning: comparison of integers of different signs: 'int' and 'std::__1::vector<std::__1::shared_ptr<_SDL_GameController>>::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < open_game_controllers.size(); i++) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:246:27: warning: comparison of integers of different signs: 'int' and 'std::__1::vector<std::__1::shared_ptr<_SDL_Joystick>>::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < open_joysticks.size(); i++) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:272:27: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < gamepad_slots.size(); ++i) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:287:31: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+            for (int a = 0; a < NUM_AXES_PER_GAMEPAD; ++a) {
+                            ~ ^ ~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:300:31: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+            for (int j = 0; j < current_gamepad.buttons.size(); ++j) {
+                            ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:328:27: warning: comparison of integers of different signs: 'int' and 'std::__1::array::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int j = 0; j < any_gamepad.buttons.size(); ++j) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/Input.cpp:572:28: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+    if (index < 0 || index > gamepad_slots.size() - 1) {
+                     ~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+10 warnings generated.
+compiling ../../src/InputUIKit.cpp
+compiling ../../src/Inspection.cpp
+compiling ../../src/LargeImageData.cpp
+compiling ../../src/Macro.cpp
+In file included from ../../src/Macro.cpp:2:
+In file included from ../../src/DrawOpQueue.hpp:4:
+../../src/DrawOp.hpp:108:36: warning: comparison of integers of different signs: 'unsigned int' and 'const int' [-Wsign-compare]
+            for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                 ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling ../../src/MarkupParser.cpp
+compiling ../../src/Math.cpp
+compiling ../../src/OffScreenTarget.cpp
+compiling ../../src/Resolution.cpp
+compiling ../../src/RubyGosu.cxx
+../../src/RubyGosu.cxx:1197:1: warning: function 'Ruby_Format_OverloadedError' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+../../src/RubyGosu.cxx:2029:53: warning: function 'raise' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    static void raise(VALUE error, const char *msg) {
+                                                    ^
+../../src/RubyGosu.cxx:2033:40: warning: function 'raise' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    static void raise(const char *msg) {
+                                       ^
+../../src/RubyGosu.cxx:2049:36: warning: function 'raise' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    static void raise(VALUE error) {
+                                   ^
+../../src/RubyGosu.cxx:2062:40: warning: function 'raise' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    static void raise(const char *msg) {
+                                       ^
+../../src/RubyGosu.cxx:2284:22: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        int width  = NUM2ULONG(rb_funcall(val, rb_intern("columns"), 0));
+            ~~~~~    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:2285:22: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        int height = NUM2ULONG(rb_funcall(val, rb_intern("rows"), 0));
+            ~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:2289:31: warning: comparison of integers of different signs: 'long' and 'std::size_t' (aka 'unsigned long') [-Wsign-compare]
+        if (RSTRING_LEN(blob) == size) {
+            ~~~~~~~~~~~~~~~~~ ^  ~~~~
+../../src/RubyGosu.cxx:2293:36: warning: comparison of integers of different signs: 'long' and 'unsigned long' [-Wsign-compare]
+        else if (RSTRING_LEN(blob) == size * sizeof(float)) {
+                 ~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:2297:26: warning: implicit conversion loses integer precision: 'std::size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+            for (int i = size; i > 0; --i) {
+                     ~   ^~~~
+../../src/RubyGosu.cxx:2688:41: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+            return *self == Gosu::Color(NUM2ULONG(other));
+                            ~~~~        ^~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:3207:29: warning: implicit conversion loses integer precision: 'const unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        self->set_caret_pos(std::min(prefix.length(), self->text().length()));
+              ~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:3219:35: warning: implicit conversion loses integer precision: 'const unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        self->set_selection_start(std::min(prefix.length(), self->text().length()));
+              ~~~~~~~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:3983:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:3986:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:3989:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4035:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4038:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4041:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4044:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4206:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4378:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4410:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4442:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4474:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4827:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4830:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4833:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4863:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4866:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4869:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4872:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4987:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg1 = Gosu::clamp<int>(NUM2ULONG(argv[0]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4990:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg2 = Gosu::clamp<int>(NUM2ULONG(argv[1]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4993:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg3 = Gosu::clamp<int>(NUM2ULONG(argv[2]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:4996:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    arg4 = Gosu::clamp<int>(NUM2ULONG(argv[3]), 0, 255);
+           ~~~~             ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:5444:28: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg8 = Gosu::Color(NUM2ULONG(argv[6]));
+               ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:5572:28: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg8 = Gosu::Color(NUM2ULONG(argv[6]));
+               ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:5716:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+                ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:5860:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+                ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6686:28: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+               ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6797:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6815:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg8 = Gosu::Color(NUM2ULONG(argv[6]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6833:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg9 = Gosu::Color(NUM2ULONG(argv[7]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6851:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:6995:29: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+        arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+                ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:7148:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg4 = Gosu::Color(NUM2ULONG(argv[2]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:7176:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg7 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:7204:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg10 = Gosu::Color(NUM2ULONG(argv[8]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:7232:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg13 = Gosu::Color(NUM2ULONG(argv[11]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11019:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg3 = Gosu::Color(NUM2ULONG(argv[2]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11047:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg6 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11146:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg3 = Gosu::Color(NUM2ULONG(argv[2]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11174:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg6 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11202:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg9 = Gosu::Color(NUM2ULONG(argv[8]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11308:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg3 = Gosu::Color(NUM2ULONG(argv[2]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11336:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg6 = Gosu::Color(NUM2ULONG(argv[5]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11364:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg9 = Gosu::Color(NUM2ULONG(argv[8]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11392:27: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg12 = Gosu::Color(NUM2ULONG(argv[11]));
+              ~~~~        ^~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+../../src/RubyGosu.cxx:11493:26: warning: implicit conversion loses integer precision: 'unsigned long' to 'unsigned int' [-Wshorten-64-to-32]
+      arg5 = Gosu::Color(NUM2ULONG(argv[4]));
+             ~~~~        ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:688:22: note: expanded from macro 'NUM2ULONG'
+#define NUM2ULONG(x) RB_NUM2ULONG(x)
+                     ^~~~~~~~~~~~~~~
+/Users/hidetaka/.rbenv/versions/2.6.4/include/ruby-2.6.0/ruby/ruby.h:687:25: note: expanded from macro 'RB_NUM2ULONG'
+#define RB_NUM2ULONG(x) rb_num2ulong_inline(x)
+                        ^~~~~~~~~~~~~~~~~~~~~~
+60 warnings generated.
+compiling ../../src/SDL_sound.c
+In file included from ../../src/SDL_sound.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound.c:208:15: warning: implicit conversion loses integer precision: 'SDL_threadID' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+        tid = SDL_ThreadID();
+            ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound.c:281:20: warning: implicit conversion loses integer precision: 'SDL_threadID' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+        err->tid = SDL_ThreadID();
+                 ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound.c:392:15: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int pos = SDL_RWtell(internal->rw);
+        ~~~   ^~~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling ../../src/SDL_sound_aiff.c
+In file included from ../../src/SDL_sound_aiff.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:274:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    retval = SDL_RWread(internal->rw, internal->buffer, 1, max);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:282:21: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+    else if (retval == -1)
+             ~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:307:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, pos, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:468:35: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    a->fmt.data_starting_offset = SDL_RWtell(rw);
+                                ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:500:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, fmt->data_starting_offset, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_aiff.c:501:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+    BAIL_IF_MACRO(rc != fmt->data_starting_offset, ERR_IO_ERROR, 0);
+                  ~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~
+../../dependencies/SDL_sound/SDL_sound_internal.h:295:36: note: expanded from macro 'BAIL_IF_MACRO'
+#define BAIL_IF_MACRO(c, e, r) if (c) { __Sound_SetError(e); return r; }
+                                   ^
+6 warnings generated.
+compiling ../../src/SDL_sound_au.c
+In file included from ../../src/SDL_sound_au.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:112:9: warning: unused variable 'skip' [-Wunused-variable]
+    int skip, hsize, i, bytes_per_second;
+        ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:192:45: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+    internal->total_time = ((dec->remaining == -1) ? (-1) :
+                             ~~~~~~~~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:199:25: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    dec->start_offset = SDL_RWtell(rw);
+                      ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:269:16: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+    if (maxlen > dec->remaining)
+        ~~~~~~ ^ ~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:271:11: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    ret = SDL_RWread(internal->rw, buf, 1, maxlen);
+        ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:300:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, dec->start_offset, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:301:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+    BAIL_IF_MACRO(rc != dec->start_offset, ERR_IO_ERROR, 0);
+                  ~~ ^  ~~~~~~~~~~~~~~~~~
+../../dependencies/SDL_sound/SDL_sound_internal.h:295:36: note: expanded from macro 'BAIL_IF_MACRO'
+#define BAIL_IF_MACRO(c, e, r) if (c) { __Sound_SetError(e); return r; }
+                                   ^
+In file included from ../../src/SDL_sound_au.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_au.c:319:10: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    rc = SDL_RWseek(internal->rw, pos, SEEK_SET);
+       ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8 warnings generated.
+compiling ../../src/SDL_sound_coreaudio.c
+In file included from ../../src/SDL_sound_coreaudio.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_coreaudio.c:218:17: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'UInt32' (aka 'unsigned int') [-Wshorten-64-to-32]
+        *actualCount = bytes_actually_read;
+                     ~ ^~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_coreaudio.c:626:9: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+        return total_bytes_read;
+        ~~~~~~ ^~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_coreaudio.c:655:30: warning: unused variable 'actual_format' [-Wunused-variable]
+        AudioStreamBasicDescription     actual_format;
+                                        ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_coreaudio.c:656:9: warning: unused variable 'format_size' [-Wunused-variable]
+        UInt32 format_size;
+               ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_coreaudio.c:159:20: warning: unused function 'CoreAudio_FourCCToString' [-Wunused-function]
+static const char* CoreAudio_FourCCToString(int32_t error_code)
+                   ^
+5 warnings generated.
+compiling ../../src/SDL_sound_flac.c
+In file included from ../../src/SDL_sound_flac.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_flac.c:58:25: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+        else if (retval == -1)
+                 ~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_flac.c:118:48: warning: implicit conversion loses integer precision: 'unsigned long long' to 'Sint32' (aka 'int') [-Wshorten-64-to-32]
+        internal->total_time = (frames / rate) * 1000;
+                             ~ ~~~~~~~~~~~~~~~~^~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_flac.c:140:15: warning: implicit conversion loses integer precision: 'unsigned long long' to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    return rc * sizeof (drflac_int32);
+    ~~~~~~ ~~~^~~~~~~~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling ../../src/SDL_sound_modplug.c
+In file included from ../../src/SDL_sound_modplug.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_modplug.c:117:18: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+        retval = SDL_RWread(internal->rw, &data[size], 1, CHUNK_SIZE);
+               ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_modplug.c:156:42: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    module = ModPlug_Load((void *) data, size, &settings);
+             ~~~~~~~~~~~~                ^~~~
+2 warnings generated.
+compiling ../../src/SDL_sound_mp3.c
+In file included from ../../src/SDL_sound_mp3.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_mp3.c:65:25: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+        else if (retval == -1)
+                 ~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_mp3.c:142:26: warning: implicit conversion loses integer precision: 'unsigned long long' to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    return rc * channels * sizeof (float);
+    ~~~~~~ ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling ../../src/SDL_sound_raw.c
+In file included from ../../src/SDL_sound_raw.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_raw.c:46:16: warning: unused variable 'rw' [-Wunused-variable]
+    SDL_RWops *rw = internal->rw;
+               ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_raw.c:76:17: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    if ( (pos = SDL_RWseek(internal->rw, 0, SEEK_END) ) <= 0) {
+              ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_raw.c:107:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    retval = SDL_RWread(internal->rw, internal->buffer,
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_raw.c:114:21: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+    else if (retval == -1)
+             ~~~~~~ ^  ~~
+4 warnings generated.
+compiling ../../src/SDL_sound_shn.c
+In file included from ../../src/SDL_sound_shn.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_shn.c:442:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+        for(i = 0; i < n0; i++)
+                   ~ ^ ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_shn.c:616:22: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    shn->start_pos = SDL_RWtell(rw);
+                   ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_shn.c:1019:12: warning: unused variable 'cpyBytes' [-Wunused-variable]
+    Uint32 cpyBytes = 0;
+           ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_shn.c:1256:12: warning: unused variable 'shn' [-Wunused-variable]
+    shn_t *shn = (shn_t *) internal->decoder_private;
+           ^
+4 warnings generated.
+compiling ../../src/SDL_sound_voc.c
+In file included from ../../src/SDL_sound_voc.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:176:34: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+                    if ((v->rate != -1) && (uc != v->rate))
+                         ~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:208:30: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+                if ((v->rate != -1) && (new_rate_long != v->rate))
+                     ~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:259:30: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+                if ((v->rate != -1) && (uc != v->rate))
+                     ~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:272:30: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+                for(i = 0; i < sblen; i++)   /* skip repeat loops. */
+                           ~ ^ ~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:291:30: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+                if ((v->rate != -1) && (new_rate_short != v->rate))
+                     ~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:323:30: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+                for(i = 0; i < sblen; i++)   /* skip repeat loops. */
+                           ~ ^ ~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:375:20: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+            done = SDL_RWread(src, buf + v->bufpos, 1, max);
+                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:376:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+            if (done < max)
+                ~~~~ ^ ~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:386:19: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+            cur = SDL_RWtell(src);
+                ~ ^~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:389:22: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+                rc = SDL_RWseek(src, max, SEEK_CUR);
+                   ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:419:20: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    v->start_pos = SDL_RWtell(internal->rw);
+                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:427:17: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+    if (v->rate == -1)
+        ~~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:483:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, v->start_pos, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:484:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+    BAIL_IF_MACRO(rc != v->start_pos, ERR_IO_ERROR, 0);
+                  ~~ ^  ~~~~~~~~~~~~
+../../dependencies/SDL_sound/SDL_sound_internal.h:295:36: note: expanded from macro 'BAIL_IF_MACRO'
+#define BAIL_IF_MACRO(c, e, r) if (c) { __Sound_SetError(e); return r; }
+                                   ^
+In file included from ../../src/SDL_sound_voc.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_voc.c:505:19: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int origpos = SDL_RWtell(internal->rw);
+        ~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~
+15 warnings generated.
+compiling ../../src/SDL_sound_vorbis.c
+compiling ../../src/SDL_sound_wav.c
+In file included from ../../src/SDL_sound_wav.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:24:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWread(rw, ui16, sizeof (Uint16), 1);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:34:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWread(rw, ui32, sizeof (Uint32), 1);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:54:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWread(rw, ui8, sizeof (Uint8), 1);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:144:45: warning: implicit conversion loses integer precision: 'long long' to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    fmt->next_chunk_offset = SDL_RWtell(rw) + fmt->chunkSize;
+                           ~ ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:221:14: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    retval = SDL_RWread(internal->rw, internal->buffer, 1, max);
+           ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:229:21: warning: comparison of integers of different signs: 'Uint32' (aka 'unsigned int') and 'int' [-Wsign-compare]
+    else if (retval == -1)
+             ~~~~~~ ^  ~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:247:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, pos, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:370:15: warning: unused variable 'byte' [-Wunused-variable]
+        Uint8 byte;
+              ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:365:12: warning: unused variable 'delta' [-Wunused-variable]
+    Sint32 delta;
+           ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:495:19: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int origpos = SDL_RWtell(internal->rw);
+        ~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:500:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, pos, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:622:18: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    Uint32 pos = SDL_RWtell(rw);
+           ~~~   ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:648:12: warning: unused variable 'pos' [-Wunused-variable]
+    Uint32 pos;
+           ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:683:33: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'Uint32' (aka 'unsigned int') [-Wshorten-64-to-32]
+    fmt->data_starting_offset = SDL_RWtell(rw);
+                              ~ ^~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:746:14: warning: implicit conversion loses integer precision: 'Sint64' (aka 'long long') to 'int' [-Wshorten-64-to-32]
+    int rc = SDL_RWseek(internal->rw, fmt->data_starting_offset, SEEK_SET);
+        ~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/SDL_sound_wav.c:747:22: warning: comparison of integers of different signs: 'int' and 'Uint32' (aka 'unsigned int') [-Wsign-compare]
+    BAIL_IF_MACRO(rc != fmt->data_starting_offset, ERR_IO_ERROR, 0);
+                  ~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~
+../../dependencies/SDL_sound/SDL_sound_internal.h:295:36: note: expanded from macro 'BAIL_IF_MACRO'
+#define BAIL_IF_MACRO(c, e, r) if (c) { __Sound_SetError(e); return r; }
+                                   ^
+16 warnings generated.
+compiling ../../src/TexChunk.cpp
+In file included from ../../src/TexChunk.cpp:2:
+In file included from ../../src/DrawOpQueue.hpp:4:
+../../src/DrawOp.hpp:108:36: warning: comparison of integers of different signs: 'unsigned int' and 'const int' [-Wsign-compare]
+            for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                 ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling ../../src/Text.cpp
+../../src/Text.cpp:95:27: warning: comparison of integers of different signs: 'int' and 'std::__1::vector<std::__1::vector<Gosu::FormattedString>>::size_type' (aka 'unsigned long') [-Wsign-compare]
+        for (int i = 0; i < lines.size(); ++i) {
+                        ~ ^ ~~~~~~~~~~~~
+1 warning generated.
+compiling ../../src/TextBuilder.cpp
+compiling ../../src/TextInput.cpp
+compiling ../../src/Texture.cpp
+compiling ../../src/TimingApple.cpp
+compiling ../../src/TimingUnix.cpp
+compiling ../../src/TimingWin.cpp
+compiling ../../src/Transform.cpp
+compiling ../../src/TrueTypeFont.cpp
+compiling ../../src/TrueTypeFontApple.cpp
+compiling ../../src/TrueTypeFontUnix.cpp
+compiling ../../src/TrueTypeFontWin.cpp
+compiling ../../src/Utility.cpp
+compiling ../../src/Version.cpp
+compiling ../../src/WinUtility.cpp
+compiling ../../src/Window.cpp
+../../src/Window.cpp:24:5: warning: function 'throw_sdl_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    {
+    ^
+1 warning generated.
+compiling ../../src/WindowUIKit.cpp
+compiling ../../src/fastmix.c
+In file included from ../../src/fastmix.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/fastmix.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_669.c
+In file included from ../../src/load_669.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_669.c:12:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_abc.c
+In file included from ../../src/load_abc.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:34:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_abc.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:716:16: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+        for( i=0; i+1 < sizeof(vc) && *voice && *voice != ']' && *voice != '%' && !SDL_isspace(*voice); voice++ )       // can work with inline voice instructions
+                  ~~~ ^ ~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1385:14: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+        for( i=0; i < sizeof(s) - 1 && p[i] && p[i] != '"' && p[i] != '/' && p[i] != '(' && p[i] != ')' && p[i] != ' '; i++ ) s[i] = p[i];
+                  ~ ^ ~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1716:49: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+        for( i=0; p[i] && p[i] != '%' && j < size && i < size; i++ ) {
+                                                     ~ ^ ~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1719:12: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                                for( n=j; n > 0 && q[n-1] != '('; n-- ) ;       // find open paren in q
+                                      ~^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1722:19: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+                                        for( k = n; k<j; k++ ) q[k-1] = q[k];   // shift to the left...
+                                                    ~^~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1729:15: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+                                n = j - n + 1;  // number of repeatable characters
+                                  ~ ~~~~~~^~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1754:13: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+        for( i=0; i<j; i++ ) {
+                  ~^~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:1757:15: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+                        for( k=i; k<j; k++ ) q[k] = q[k+1];
+                                  ~^~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2081:10: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        int l = SDL_strlen(target);
+            ~   ^~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2082:10: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        int n = SDL_strlen(s);
+            ~   ^~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2086:10: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                if( (i=SDL_strlen(h->line)) + n - l >= (int)h->len ) {
+                      ~^~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2107:12: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                k = m->n - m->name;
+                  ~ ~~~~~^~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2113:8: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                        l = SDL_strlen(m->subst);
+                          ~ ^~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:2146:13: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                while( (i=SDL_strlen(h->line)) > (int)(h->len - 3) ) {
+                         ~^~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:3017:30: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+        gsteps = SDL_strlen(h->drum)/2;
+               ~ ~~~~~~~~~~~~~~~~~~~^~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:3082:11: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        gsteps = SDL_strlen(h->gchord);
+               ~ ^~~~~~~~~~~~~~~~~~~~~
+../../src/load_abc.c:1:10: warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c"
+         ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:60:9: note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1)
+        ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:266:20: warning: unused function 'abc_skipspace' [-Wunused-function]
+static const char *abc_skipspace(const char *p)
+                   ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_abc.c:328:13: warning: unused function 'abc_dumptracks' [-Wunused-function]
+static void abc_dumptracks(ABCHANDLE *h, const char *p)
+            ^
+20 warnings generated.
+compiling ../../src/load_amf.c
+In file included from ../../src/load_amf.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_amf.c:16:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_ams.c
+In file included from ../../src/load_ams.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_ams.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_ams.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_ams.c:323:9: warning: unused variable 'pinsname' [-Wunused-variable]
+                CHAR *pinsname = (CHAR *)(lpStream+dwMemPos+1);
+                      ^
+2 warnings generated.
+compiling ../../src/load_dbm.c
+In file included from ../../src/load_dbm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_dbm.c:16:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_dmf.c
+In file included from ../../src/load_dmf.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_dmf.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_dmf.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_dmf.c:528:19: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        return tree.ibuf - ibuf;
+        ~~~~~~ ~~~~~~~~~~^~~~~~
+2 warnings generated.
+compiling ../../src/load_dsm.c
+In file included from ../../src/load_dsm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_dsm.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_far.c
+In file included from ../../src/load_far.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_far.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_it.c
+In file included from ../../src/load_it.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_it.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_it.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_it.c:773:8: warning: unused variable 'nPlugin' [-Wunused-variable]
+                UINT nPlugin;
+                     ^
+2 warnings generated.
+compiling ../../src/load_mdl.c
+In file included from ../../src/load_mdl.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mdl.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_med.c
+In file included from ../../src/load_med.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_med.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_mid.c
+In file included from ../../src/load_mid.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mid.c:33:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_mid.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mid.c:1335:40: warning: implicit conversion loses integer precision: 'long' to 'ULONG' (aka 'unsigned int') [-Wshorten-64-to-32]
+                        mid_notes_to_percussion(ttp, delta, metalen);
+                        ~~~~~~~~~~~~~~~~~~~~~~~             ^~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mid.c:1335:33: warning: implicit conversion loses integer precision: 'long' to 'ULONG' (aka 'unsigned int') [-Wshorten-64-to-32]
+                        mid_notes_to_percussion(ttp, delta, metalen);
+                        ~~~~~~~~~~~~~~~~~~~~~~~      ^~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mid.c:1337:34: warning: implicit conversion loses integer precision: 'long' to 'ULONG' (aka 'unsigned int') [-Wshorten-64-to-32]
+                        mid_prog_to_notes(ttp, delta, metalen);
+                        ~~~~~~~~~~~~~~~~~             ^~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mid.c:1337:27: warning: implicit conversion loses integer precision: 'long' to 'ULONG' (aka 'unsigned int') [-Wshorten-64-to-32]
+                        mid_prog_to_notes(ttp, delta, metalen);
+                        ~~~~~~~~~~~~~~~~~      ^~~~~
+5 warnings generated.
+compiling ../../src/load_mod.c
+In file included from ../../src/load_mod.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mod.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_mt2.c
+In file included from ../../src/load_mt2.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mt2.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_mtm.c
+In file included from ../../src/load_mtm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_mtm.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_okt.c
+In file included from ../../src/load_okt.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_okt.c:11:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_pat.c
+In file included from ../../src/load_pat.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_pat.c:31:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/load_pat.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_pat.c:185:9: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        return SDL_strlen((const char *)pat_gm_used);
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_pat.c:190:9: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+        return SDL_strlen((const char *)pat_gm_used);
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/load_pat.c:1:10: warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_pat.c"
+         ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_pat.c:66:9: note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1)
+        ^
+4 warnings generated.
+compiling ../../src/load_psm.c
+In file included from ../../src/load_psm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_psm.c:12:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_ptm.c
+In file included from ../../src/load_ptm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_ptm.c:11:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_s3m.c
+In file included from ../../src/load_s3m.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_s3m.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+../../src/load_s3m.c:1:10: warning: the current #pragma pack alignment value is modified in the included file [-Wpragma-pack]
+#include "/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_s3m.c"
+         ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_s3m.c:14:9: note: previous '#pragma pack' directive that modifies alignment is here
+#pragma pack(1)
+        ^
+2 warnings generated.
+compiling ../../src/load_stm.c
+In file included from ../../src/load_stm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_stm.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_ult.c
+In file included from ../../src/load_ult.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_ult.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_umx.c
+In file included from ../../src/load_umx.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_umx.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/load_xm.c
+In file included from ../../src/load_xm.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/load_xm.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/mmcmp.c
+In file included from ../../src/mmcmp.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/mmcmp.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/modplug.c
+In file included from ../../src/modplug.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/modplug.c:8:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/modplug.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/modplug.c:86:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                        newpos = p;
+                               ~ ^
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/modplug.c:92:24: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+                        newpos = mmfile->sz + p;
+                               ~ ~~~~~~~~~~~^~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/modplug.c:105:13: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+        int sztr = sz;
+            ~~~~   ^~
+4 warnings generated.
+compiling ../../src/snd_dsp.c
+In file included from ../../src/snd_dsp.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/snd_dsp.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/snd_flt.c
+In file included from ../../src/snd_flt.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/snd_flt.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/snd_fx.c
+In file included from ../../src/snd_fx.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/snd_fx.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/sndfile.c
+In file included from ../../src/sndfile.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/sndfile.c:10:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+1 warning generated.
+compiling ../../src/sndmix.c
+In file included from ../../src/sndmix.c:1:
+In file included from /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/sndmix.c:7:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/libmodplug.h:67:41: warning: implicit conversion loses integer precision: 'unsigned long long' to 'LONG' (aka 'int') [-Wshorten-64-to-32]
+  return ((uint64_t) a * (uint64_t) b ) / c;
+  ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from ../../src/sndmix.c:1:
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/sndmix.c:48:40: warning: implicit conversion loses integer precision: 'unsigned long long' to 'int' [-Wshorten-64-to-32]
+        return ((uint64_t) a * (uint64_t) b ) / c;
+        ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/dependencies/SDL_sound/libmodplug/sndmix.c:55:50: warning: implicit conversion loses integer precision: 'unsigned long long' to 'int' [-Wshorten-64-to-32]
+        return ((uint64_t) a * (uint64_t) b + (c >> 1)) / c;
+        ~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+3 warnings generated.
+compiling ../../src/utf8proc.c
+linking shared-object gosu.bundle
+
+current directory: /Users/hidetaka/PF/Retro.game_try/retro.game_try/vendor/ruby/2.6.0/gems/gosu-1.2.0/ext/gosu
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gosu.bundle ./.gem.20210511-50116-gldeuo
